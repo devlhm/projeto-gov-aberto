@@ -1,0 +1,939 @@
+/**
+ * Estilos do Raio de Cidadania — mobile-first.
+ * Identidade Coop Clima São Vicente: vernacular, amigável, vibrante.
+ */
+
+@import './theme/tokens.css';
+
+/* ============ Base ============ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background: var(--cor-claro);
+  color: var(--cor-escuro);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none; /* evita "puxar" a página junto com o mapa */
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Acessibilidade: foco visível com traço "à mão" da marca */
+:focus-visible {
+  outline: 3px dashed var(--cor-laranja);
+  outline-offset: 2px;
+}
+
+.app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* ============ Mapa em tela cheia ============ */
+
+.mapa-fundo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fonte-corpo);
+  background: #cfe0dd; /* tom de água enquanto os tiles carregam */
+}
+
+/* ============ Barra superior ============ */
+
+.ui-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  pointer-events: none; /* deixa o mapa receber toques entre os controles */
+}
+
+.ui-topo > * {
+  pointer-events: auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: calc(8px + env(safe-area-inset-top)) 12px 8px;
+  background:
+    var(--textura-madeira),
+    rgba(249, 243, 240, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid rgba(135, 74, 51, 0.18);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.titulo-bloco {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.titulo-app {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1;
+  margin: 0;
+  color: var(--cor-escuro);
+  white-space: nowrap;
+}
+
+.assinatura-app {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--cor-marrom);
+  white-space: nowrap;
+}
+
+/* Botão "Usar minha localização" */
+.btn-localizacao {
+  margin-left: auto;
+  min-height: var(--alvo-toque);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  border: none;
+  border-radius: var(--raio-pilula);
+  background: var(--cor-azul);
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  box-shadow: var(--sombra-flutuante);
+  flex-shrink: 0;
+}
+
+.btn-localizacao[data-ativo='true'] {
+  background: var(--cor-verde);
+}
+
+.btn-localizacao:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+/* ============ Logo "COOP CLIMA" (wordmark vernacular recriado) ============
+   Letras blocadas, cada uma com leve rotação própria — como no manual.
+   COOP alterna marrom/laranja; CLIMA alterna verde/azul. */
+
+.logo-coop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  line-height: 0.8;
+  font-size: 17px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.logo-coop span {
+  display: inline-block;
+}
+
+/* rotações levemente diferentes por letra = tipografia de letreiro pintado */
+.logo-coop .l1 { transform: rotate(-5deg); }
+.logo-coop .l2 { transform: rotate(4deg); }
+.logo-coop .l3 { transform: rotate(-3deg); }
+.logo-coop .l4 { transform: rotate(14deg) translateY(1px); font-size: 1.12em; } /* o "P" maior e caído */
+.logo-coop .l5 { transform: rotate(5deg); }
+.logo-coop .l6 { transform: rotate(-4deg); }
+.logo-coop .l7 { transform: rotate(3deg); font-size: 0.8em; } /* o "i" baixinho */
+.logo-coop .l8 { transform: rotate(-6deg); }
+.logo-coop .l9 { transform: rotate(4deg); }
+
+.logo-coop .marrom { color: var(--cor-marrom); }
+.logo-coop .laranja { color: var(--cor-laranja); }
+.logo-coop .verde { color: var(--cor-verde); }
+.logo-coop .azul { color: var(--cor-azul); }
+
+/* versão monocromática negativa (sobre fundos escuros/coloridos) */
+.logo-coop.mono span {
+  color: #fff;
+}
+
+/* ============ Chips de filtro ============ */
+
+.filtros {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 12px;
+  scrollbar-width: none;
+}
+
+.filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  min-height: 42px;
+  padding: 0 15px;
+  border: 2px solid rgba(135, 74, 51, 0.25);
+  border-radius: var(--raio-pilula);
+  background: rgba(249, 243, 240, 0.95);
+  color: var(--cor-escuro);
+  font-size: 13.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: var(--sombra-card);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* chip ativo ganha cor cheia + borda tracejada "à mão" */
+.chip[aria-pressed='true'],
+.chip[aria-checked='true'] {
+  color: #fff;
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.chip-verde[aria-pressed='true'],
+.chip-verde[aria-checked='true'] { background: var(--cor-verde); }
+.chip-azul[aria-pressed='true'],
+.chip-azul[aria-checked='true'] { background: var(--cor-azul); }
+.chip-laranja[aria-pressed='true'],
+.chip-laranja[aria-checked='true'] { background: var(--cor-laranja); }
+
+/* ============ Aviso (modo demonstração / erros) ============ */
+
+.aviso {
+  margin: 0 12px;
+  padding: 8px 14px;
+  border-radius: var(--raio-artesanal);
+  background: var(--cor-escuro);
+  color: #fff;
+  font-size: 13px;
+  box-shadow: var(--sombra-card);
+  width: fit-content;
+  max-width: calc(100% - 24px);
+}
+
+/* ============ Bottom Sheet ============ */
+
+.sheet {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  max-width: 540px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  background:
+    var(--textura-madeira),
+    var(--cor-claro);
+  border-radius: 22px 26px 0 0 / 26px 20px 0 0; /* topo levemente imperfeito */
+  box-shadow: var(--sombra-sheet);
+  transition: height 0.28s cubic-bezier(0.32, 0.72, 0.28, 1);
+}
+
+.sheet[data-arrastando='true'] {
+  transition: none;
+}
+
+/* Alturas dos 3 estados (durante o arrasto, o style inline prevalece) */
+.sheet[data-estado='recolhido'] { height: 128px; }
+.sheet[data-estado='meio'] { height: 46dvh; }
+.sheet[data-estado='expandido'] { height: 88dvh; }
+
+.sheet-alca-area {
+  padding: 10px 16px 6px;
+  cursor: grab;
+  touch-action: none; /* o arrasto do sheet não rola a página */
+  flex-shrink: 0;
+}
+
+.sheet-alca {
+  width: 52px;
+  height: 5px;
+  margin: 0 auto;
+  border-radius: var(--raio-pilula);
+  background: rgba(135, 74, 51, 0.35);
+}
+
+/* Abas de navegação do sheet */
+.abas {
+  display: flex;
+  gap: 6px;
+  padding: 6px 14px 10px;
+  flex-shrink: 0;
+}
+
+.aba {
+  flex: 1;
+  min-height: var(--alvo-toque);
+  border: 2px solid transparent;
+  border-radius: var(--raio-artesanal);
+  background: var(--cor-claro-2);
+  color: var(--cor-escuro);
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.aba[aria-selected='true'] {
+  background: var(--cor-verde);
+  color: #fff;
+  border-radius: var(--raio-artesanal-2);
+}
+
+.sheet-conteudo {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 2px 16px calc(20px + env(safe-area-inset-bottom));
+}
+
+/* quando recolhido, esconde o conteúdo (só alça + abas visíveis) */
+.sheet[data-estado='recolhido'] .sheet-conteudo {
+  overflow: hidden;
+}
+
+/* ============ Cards genéricos ============ */
+
+.card {
+  background: #fff;
+  border: 1.5px solid rgba(135, 74, 51, 0.12);
+  border-radius: var(--raio-artesanal);
+  box-shadow: var(--sombra-card);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+/* leve alternância de inclinação — estética artesanal, bem sutil */
+.card:nth-child(even) {
+  border-radius: var(--raio-artesanal-2);
+}
+
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 22px;
+  margin: 10px 0 8px;
+  color: var(--cor-escuro);
+}
+
+.texto-suave {
+  color: var(--cor-escuro-60);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+/* ============ Card de equipamento ============ */
+
+.eq-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.eq-icone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 46% 52% 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.eq-icone.saude { background: var(--cor-azul); }
+.eq-icone.educacao { background: var(--cor-laranja); }
+
+.eq-corpo {
+  flex: 1;
+  min-width: 0;
+}
+
+.eq-nome {
+  font-weight: 700;
+  font-size: 14.5px;
+  line-height: 1.25;
+  margin: 0 0 2px;
+}
+
+.eq-meta {
+  font-size: 12.5px;
+  color: var(--cor-escuro-60);
+  margin-bottom: 6px;
+}
+
+.eq-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: var(--raio-pilula);
+  background: var(--cor-claro-2);
+  color: var(--cor-marrom);
+}
+
+.eq-lado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.eq-distancia {
+  font-family: var(--fonte-titulo);
+  font-size: 19px;
+  color: var(--cor-verde);
+  white-space: nowrap;
+}
+
+.btn-rota {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border: none;
+  border-radius: var(--raio-pilula);
+  background: var(--cor-verde);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* ============ Slider de raio ============ */
+
+.raio-controle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.raio-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.raio-valor {
+  font-family: var(--fonte-titulo);
+  font-size: 26px;
+  color: var(--cor-verde);
+}
+
+.raio-slider {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 34px; /* área de toque generosa */
+  background: transparent;
+  margin: 0;
+}
+
+.raio-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: var(--raio-pilula);
+  background: var(--grad-verde-azul);
+}
+
+.raio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  margin-top: -9px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--cor-verde);
+  box-shadow: var(--sombra-card);
+}
+
+.raio-slider::-moz-range-track {
+  height: 8px;
+  border-radius: var(--raio-pilula);
+  background: var(--grad-verde-azul);
+}
+
+.raio-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--cor-verde);
+  box-shadow: var(--sombra-card);
+}
+
+.raio-legenda {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--cor-escuro-60);
+}
+
+/* ============ Selo de status ============ */
+
+.selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 3px 12px;
+  border-radius: var(--raio-pilula);
+  color: #fff;
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
+.selo::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.ponto-status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ============ Painel do bairro ============ */
+
+.painel-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 8px 0 10px;
+}
+
+.painel-cabecalho h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+  line-height: 1;
+}
+
+.grade-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.stat {
+  background: #fff;
+  border: 1.5px solid rgba(135, 74, 51, 0.12);
+  border-radius: var(--raio-artesanal);
+  box-shadow: var(--sombra-card);
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.stat-valor {
+  font-family: var(--fonte-titulo);
+  font-size: 21px;
+  color: var(--cor-verde);
+  line-height: 1.05;
+}
+
+.stat-rotulo {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-escuro-60);
+  margin-top: 3px;
+}
+
+/* Gráfico de barras do perfil étnico-racial (CSS puro) */
+.grafico-racial .linha-racial {
+  display: grid;
+  grid-template-columns: 76px 1fr 92px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.rotulo-racial {
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.barra-trilha {
+  height: 18px;
+  background: var(--cor-claro-2);
+  border-radius: 6px 9px 7px 8px / 8px 7px 9px 6px;
+  overflow: hidden;
+}
+
+.barra-preenchida {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.5s ease-out;
+  min-width: 2px;
+}
+
+.valor-racial {
+  font-size: 12px;
+  text-align: right;
+  color: var(--cor-escuro-60);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Cartões de cobertura (saúde × educação) */
+.grade-cobertura {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.cobertura-card {
+  border-radius: var(--raio-artesanal);
+  padding: 12px;
+  color: #fff;
+  box-shadow: var(--sombra-card);
+}
+
+.cobertura-card.saude { background: var(--grad-azul-marrom); }
+.cobertura-card.educacao { background: var(--grad-laranja-marrom); }
+
+.cobertura-titulo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-titulo);
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.cobertura-razao {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  min-height: 2.4em;
+}
+
+.cobertura-card .selo {
+  background: rgba(26, 30, 44, 0.35);
+}
+
+/* Botões de dados abertos */
+.acoes-dados {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btn-dados {
+  flex: 1;
+  min-height: var(--alvo-toque);
+  border: 2px dashed var(--cor-marrom);
+  border-radius: var(--raio-artesanal);
+  background: transparent;
+  color: var(--cor-marrom);
+  font-weight: 700;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-dados:active {
+  background: var(--cor-claro-2);
+}
+
+/* Grade de bairros (estado vazio do painel) */
+.grade-bairros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.chip-bairro {
+  min-height: var(--alvo-toque);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1.5px solid rgba(135, 74, 51, 0.15);
+  border-radius: var(--raio-artesanal);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-align: left;
+  box-shadow: var(--sombra-card);
+}
+
+/* ============ Ranking ============ */
+
+.alternar-metrica {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.linha-ranking {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1.5px solid rgba(135, 74, 51, 0.12);
+  border-radius: var(--raio-artesanal);
+  box-shadow: var(--sombra-card);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  min-height: 56px;
+}
+
+.linha-ranking:nth-child(even) {
+  border-radius: var(--raio-artesanal-2);
+}
+
+.posicao {
+  font-family: var(--fonte-titulo);
+  font-size: 21px;
+  color: var(--cor-marrom);
+  width: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ranking-corpo {
+  flex: 1;
+  min-width: 0;
+}
+
+.ranking-nome {
+  font-weight: 700;
+  font-size: 14.5px;
+}
+
+.ranking-razao {
+  font-size: 12.5px;
+  color: var(--cor-escuro-60);
+}
+
+.ranking-acoes {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-mini {
+  min-width: var(--alvo-toque);
+  min-height: 36px;
+  padding: 0 10px;
+  border: 1.5px dashed var(--cor-marrom);
+  border-radius: var(--raio-pilula);
+  background: transparent;
+  color: var(--cor-marrom);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* ============ Marcadores no mapa ============ */
+
+.pino {
+  filter: drop-shadow(0 3px 3px rgba(26, 30, 44, 0.35));
+  transition: transform 0.15s;
+  transform-origin: bottom center;
+}
+
+.pino[data-selecionado='true'] {
+  transform: scale(1.25);
+}
+
+.ponto-usuario {
+  width: 18px;
+  height: 18px;
+  background: var(--cor-azul);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 163, 224, 0.45);
+  animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+  0% { box-shadow: 0 0 0 0 rgba(0, 163, 224, 0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(0, 163, 224, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 163, 224, 0); }
+}
+
+/* Rótulo do bairro sobre o polígono */
+.rotulo-bairro {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.rotulo-bairro span {
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  color: var(--cor-escuro);
+  text-shadow:
+    -1px -1px 0 rgba(249, 243, 240, 0.9),
+    1px -1px 0 rgba(249, 243, 240, 0.9),
+    -1px 1px 0 rgba(249, 243, 240, 0.9),
+    1px 1px 0 rgba(249, 243, 240, 0.9);
+  white-space: nowrap;
+}
+
+/* ============ Splash de carregamento ============ */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--grad-verde-azul);
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+}
+
+.splash .logo-coop {
+  font-size: 34px;
+}
+
+.splash h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 34px;
+  margin: 0;
+}
+
+.girador {
+  width: 34px;
+  height: 34px;
+  border: 4px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* ============ Estado vazio / CTA de localização ============ */
+
+.cta-localizacao {
+  width: 100%;
+  min-height: 52px;
+  border: none;
+  border-radius: var(--raio-artesanal);
+  background: var(--grad-verde-azul);
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-size: 19px;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: var(--sombra-flutuante);
+  margin: 8px 0;
+}
+
+.link-demo {
+  background: none;
+  border: none;
+  color: var(--cor-marrom);
+  font-size: 13.5px;
+  text-decoration: underline dashed;
+  min-height: var(--alvo-toque);
+  width: 100%;
+}
+
+/* ============ Desktop: sheet vira painel lateral ============ */
+
+@media (min-width: 900px) {
+  .sheet {
+    left: 16px;
+    transform: none;
+    bottom: 16px;
+    max-width: 420px;
+    border-radius: 22px 26px 20px 24px / 26px 20px 24px 22px;
+  }
+
+  .topbar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ============ Acessibilidade: movimento reduzido ============ */
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet,
+  .barra-preenchida,
+  .pino {
+    transition: none;
+  }
+
+  .ponto-usuario {
+    animation: none;
+  }
+}

@@ -1,0 +1,732 @@
+{
+ "type": "FeatureCollection",
+ "name": "bairros_sao_vicente_mock",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Centro",
+    "populacao_total": 12000,
+    "area_km2": 0.56,
+    "densidade": 21328,
+    "raca": {
+     "brancos": 7278,
+     "negros": 4560,
+     "indigenas": 18,
+     "amarelos": 144
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.38326,
+       -23.96284
+      ],
+      [
+       -46.39042,
+       -23.97201
+      ],
+      [
+       -46.39244,
+       -23.96175
+      ],
+      [
+       -46.38506,
+       -23.96175
+      ],
+      [
+       -46.38326,
+       -23.96284
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Gonzaguinha",
+    "populacao_total": 9000,
+    "area_km2": 1.26,
+    "densidade": 7129,
+    "raca": {
+     "brancos": 6342,
+     "negros": 2520,
+     "indigenas": 12,
+     "amarelos": 126
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.37896,
+       -23.97637
+      ],
+      [
+       -46.383,
+       -23.9765
+      ],
+      [
+       -46.39066,
+       -23.97287
+      ],
+      [
+       -46.39042,
+       -23.97201
+      ],
+      [
+       -46.38326,
+       -23.96284
+      ],
+      [
+       -46.37877,
+       -23.96263
+      ],
+      [
+       -46.37896,
+       -23.97637
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Itararé",
+    "populacao_total": 9500,
+    "area_km2": 1.76,
+    "densidade": 5411,
+    "raca": {
+     "brancos": 7068,
+     "negros": 2280,
+     "indigenas": 10,
+     "amarelos": 142
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.36309,
+       -23.95321
+      ],
+      [
+       -46.361,
+       -23.956
+      ],
+      [
+       -46.36,
+       -23.97
+      ],
+      [
+       -46.368,
+       -23.976
+      ],
+      [
+       -46.37388,
+       -23.9762
+      ],
+      [
+       -46.36309,
+       -23.95321
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Boa Vista",
+    "populacao_total": 11500,
+    "area_km2": 2.02,
+    "densidade": 5704,
+    "raca": {
+     "brancos": 7886,
+     "negros": 3450,
+     "indigenas": 14,
+     "amarelos": 150
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.36407,
+       -23.95191
+      ],
+      [
+       -46.36309,
+       -23.95321
+      ],
+      [
+       -46.37388,
+       -23.9762
+      ],
+      [
+       -46.37896,
+       -23.97637
+      ],
+      [
+       -46.37877,
+       -23.96263
+      ],
+      [
+       -46.36407,
+       -23.95191
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Vila Valença",
+    "populacao_total": 10000,
+    "area_km2": 3.9,
+    "densidade": 2562,
+    "raca": {
+     "brancos": 5884,
+     "negros": 4000,
+     "indigenas": 16,
+     "amarelos": 100
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.38196,
+       -23.94071
+      ],
+      [
+       -46.37,
+       -23.944
+      ],
+      [
+       -46.36407,
+       -23.95191
+      ],
+      [
+       -46.37877,
+       -23.96263
+      ],
+      [
+       -46.38326,
+       -23.96284
+      ],
+      [
+       -46.38506,
+       -23.96175
+      ],
+      [
+       -46.38917,
+       -23.95016
+      ],
+      [
+       -46.38196,
+       -23.94071
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Catiapoã",
+    "populacao_total": 14000,
+    "area_km2": 0.96,
+    "densidade": 14612,
+    "raca": {
+     "brancos": 7974,
+     "negros": 5880,
+     "indigenas": 20,
+     "amarelos": 126
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.38917,
+       -23.95016
+      ],
+      [
+       -46.38506,
+       -23.96175
+      ],
+      [
+       -46.39244,
+       -23.96175
+      ],
+      [
+       -46.39843,
+       -23.95707
+      ],
+      [
+       -46.38917,
+       -23.95016
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Parque Bitaru",
+    "populacao_total": 9800,
+    "area_km2": 1.15,
+    "densidade": 8520,
+    "raca": {
+     "brancos": 5395,
+     "negros": 4312,
+     "indigenas": 15,
+     "amarelos": 78
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.39244,
+       -23.96175
+      ],
+      [
+       -46.39042,
+       -23.97201
+      ],
+      [
+       -46.39066,
+       -23.97287
+      ],
+      [
+       -46.3925,
+       -23.972
+      ],
+      [
+       -46.40125,
+       -23.96533
+      ],
+      [
+       -46.40211,
+       -23.95823
+      ],
+      [
+       -46.40143,
+       -23.9576
+      ],
+      [
+       -46.39843,
+       -23.95707
+      ],
+      [
+       -46.39244,
+       -23.96175
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Vila Margarida",
+    "populacao_total": 8500,
+    "area_km2": 0.47,
+    "densidade": 18014,
+    "raca": {
+     "brancos": 4007,
+     "negros": 4420,
+     "indigenas": 22,
+     "amarelos": 51
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.40211,
+       -23.95823
+      ],
+      [
+       -46.40125,
+       -23.96533
+      ],
+      [
+       -46.403,
+       -23.964
+      ],
+      [
+       -46.41497,
+       -23.96001
+      ],
+      [
+       -46.40211,
+       -23.95823
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Parque São Vicente",
+    "populacao_total": 19000,
+    "area_km2": 3.33,
+    "densidade": 5699,
+    "raca": {
+     "brancos": 9337,
+     "negros": 9500,
+     "indigenas": 30,
+     "amarelos": 133
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.40803,
+       -23.93924
+      ],
+      [
+       -46.39,
+       -23.9385
+      ],
+      [
+       -46.38196,
+       -23.94071
+      ],
+      [
+       -46.38917,
+       -23.95016
+      ],
+      [
+       -46.39843,
+       -23.95707
+      ],
+      [
+       -46.40143,
+       -23.9576
+      ],
+      [
+       -46.40803,
+       -23.93924
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Cidade Náutica",
+    "populacao_total": 14000,
+    "area_km2": 2.64,
+    "densidade": 5294,
+    "raca": {
+     "brancos": 7157,
+     "negros": 6720,
+     "indigenas": 25,
+     "amarelos": 98
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.4145,
+       -23.9395
+      ],
+      [
+       -46.40803,
+       -23.93924
+      ],
+      [
+       -46.40143,
+       -23.9576
+      ],
+      [
+       -46.40211,
+       -23.95823
+      ],
+      [
+       -46.41497,
+       -23.96001
+      ],
+      [
+       -46.415,
+       -23.96
+      ],
+      [
+       -46.418,
+       -23.952
+      ],
+      [
+       -46.4145,
+       -23.9395
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Jardim Rio Branco",
+    "populacao_total": 19000,
+    "area_km2": 10.26,
+    "densidade": 1851,
+    "raca": {
+     "brancos": 7869,
+     "negros": 11020,
+     "indigenas": 35,
+     "amarelos": 76
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.48968,
+       -23.99069
+      ],
+      [
+       -46.5,
+       -23.986
+      ],
+      [
+       -46.495,
+       -23.964
+      ],
+      [
+       -46.48321,
+       -23.95221
+      ],
+      [
+       -46.46368,
+       -23.96531
+      ],
+      [
+       -46.4646,
+       -23.98008
+      ],
+      [
+       -46.48968,
+       -23.99069
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Humaitá",
+    "populacao_total": 26000,
+    "area_km2": 9.66,
+    "densidade": 2692,
+    "raca": {
+     "brancos": 10256,
+     "negros": 15600,
+     "indigenas": 40,
+     "amarelos": 104
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.475,
+       -23.944
+      ],
+      [
+       -46.438,
+       -23.945
+      ],
+      [
+       -46.433,
+       -23.962
+      ],
+      [
+       -46.43441,
+       -23.96652
+      ],
+      [
+       -46.46368,
+       -23.96531
+      ],
+      [
+       -46.48321,
+       -23.95221
+      ],
+      [
+       -46.475,
+       -23.944
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Quarentenário",
+    "populacao_total": 24000,
+    "area_km2": 6.4,
+    "densidade": 3751,
+    "raca": {
+     "brancos": 9003,
+     "negros": 14880,
+     "indigenas": 45,
+     "amarelos": 72
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.43441,
+       -23.96652
+      ],
+      [
+       -46.438,
+       -23.978
+      ],
+      [
+       -46.452,
+       -23.993
+      ],
+      [
+       -46.45456,
+       -23.9933
+      ],
+      [
+       -46.4646,
+       -23.98008
+      ],
+      [
+       -46.46368,
+       -23.96531
+      ],
+      [
+       -46.43441,
+       -23.96652
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Samaritá",
+    "populacao_total": 17000,
+    "area_km2": 3.34,
+    "densidade": 5089,
+    "raca": {
+     "brancos": 7374,
+     "negros": 9520,
+     "indigenas": 38,
+     "amarelos": 68
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.45456,
+       -23.9933
+      ],
+      [
+       -46.478,
+       -23.996
+      ],
+      [
+       -46.48968,
+       -23.99069
+      ],
+      [
+       -46.4646,
+       -23.98008
+      ],
+      [
+       -46.45456,
+       -23.9933
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "nome": "Japuí",
+    "populacao_total": 6500,
+    "area_km2": 2.25,
+    "densidade": 2889,
+    "raca": {
+     "brancos": 3158,
+     "negros": 2990,
+     "indigenas": 320,
+     "amarelos": 32
+    }
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.388,
+       -23.98
+      ],
+      [
+       -46.399,
+       -23.9815
+      ],
+      [
+       -46.403,
+       -23.99
+      ],
+      [
+       -46.395,
+       -23.9945
+      ],
+      [
+       -46.386,
+       -23.992
+      ],
+      [
+       -46.383,
+       -23.984
+      ],
+      [
+       -46.388,
+       -23.98
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,1230 @@
+{
+ "type": "FeatureCollection",
+ "name": "equipamentos_sao_vicente_mock",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-001",
+    "nome": "Hospital e Maternidade Municipal de São Vicente",
+    "endereco": "Rua Padre José de Anchieta, 370 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "saude",
+    "subtipo": "Hospital",
+    "atende_24h": true,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.963861,
+    "lng": -46.384414
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.384414,
+     -23.963861
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-002",
+    "nome": "Pronto-Socorro Central de São Vicente",
+    "endereco": "Rua Jacob Emmerich, 425 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "saude",
+    "subtipo": "Pronto-Socorro",
+    "atende_24h": true,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.96226,
+    "lng": -46.388386
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.388386,
+     -23.96226
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-003",
+    "nome": "UBS Central",
+    "endereco": "Rua Frei Gaspar, 509 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.968592,
+    "lng": -46.391007
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.391007,
+     -23.968592
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-004",
+    "nome": "EMEF Martim Afonso",
+    "endereco": "Praça João Pessoa, 44 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.963941,
+    "lng": -46.385593
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.385593,
+     -23.963941
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-005",
+    "nome": "EMEF Padre Anchieta",
+    "endereco": "Rua XV de Novembro, 91 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.964567,
+    "lng": -46.390964
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.390964,
+     -23.964567
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-006",
+    "nome": "EMEI Vinte e Dois de Janeiro",
+    "endereco": "Rua João Ramalho, 180 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "educacao",
+    "subtipo": "EMEI",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.963517,
+    "lng": -46.388444
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.388444,
+     -23.963517
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-007",
+    "nome": "Creche Municipal Pref. Antônio Fernando dos Reis",
+    "endereco": "Av. Presidente Wilson, 267 — Centro, São Vicente/SP",
+    "bairro": "Centro",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.965564,
+    "lng": -46.390642
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.390642,
+     -23.965564
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-008",
+    "nome": "UBS Gonzaguinha",
+    "endereco": "Av. Capitão-Mor Aguiar, 644 — Gonzaguinha, São Vicente/SP",
+    "bairro": "Gonzaguinha",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.972854,
+    "lng": -46.384909
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.384909,
+     -23.972854
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-009",
+    "nome": "EMEI Praia do Gonzaguinha",
+    "endereco": "Rua Ipiranga, 320 — Gonzaguinha, São Vicente/SP",
+    "bairro": "Gonzaguinha",
+    "tipo": "educacao",
+    "subtipo": "EMEI",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.966048,
+    "lng": -46.38162
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.38162,
+     -23.966048
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-010",
+    "nome": "EMEF Cacilda Becker",
+    "endereco": "Av. Manoel da Nóbrega, 512 — Gonzaguinha, São Vicente/SP",
+    "bairro": "Gonzaguinha",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.96742,
+    "lng": -46.381981
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.381981,
+     -23.96742
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-011",
+    "nome": "UBS Itararé",
+    "endereco": "Rua Padre Manoel Anselmo, 88 — Itararé, São Vicente/SP",
+    "bairro": "Itararé",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.974306,
+    "lng": -46.371625
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.371625,
+     -23.974306
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-012",
+    "nome": "EMEI Beira-Mar",
+    "endereco": "Av. Ayrton Senna da Silva, 1020 — Itararé, São Vicente/SP",
+    "bairro": "Itararé",
+    "tipo": "educacao",
+    "subtipo": "EMEI",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.9718,
+    "lng": -46.363373
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.363373,
+     -23.9718
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-013",
+    "nome": "EMEF Nossa Senhora Aparecida",
+    "endereco": "Rua Anchieta, 215 — Itararé, São Vicente/SP",
+    "bairro": "Itararé",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.972095,
+    "lng": -46.370069
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.370069,
+     -23.972095
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-014",
+    "nome": "Ambulatório de Especialidades Boa Vista",
+    "endereco": "Rua Onze de Junho, 291 — Boa Vista, São Vicente/SP",
+    "bairro": "Boa Vista",
+    "tipo": "saude",
+    "subtipo": "Ambulatório",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.971709,
+    "lng": -46.37852
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.37852,
+     -23.971709
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-015",
+    "nome": "UBS Boa Vista",
+    "endereco": "Av. Presidente Wilson, 890 — Boa Vista, São Vicente/SP",
+    "bairro": "Boa Vista",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.967048,
+    "lng": -46.369905
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.369905,
+     -23.967048
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-016",
+    "nome": "EMEF Rubens Arruda",
+    "endereco": "Rua Rangel Pestana, 133 — Boa Vista, São Vicente/SP",
+    "bairro": "Boa Vista",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.966324,
+    "lng": -46.375043
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.375043,
+     -23.966324
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-017",
+    "nome": "Creche Municipal Vovó Lenice",
+    "endereco": "Rua Marechal Deodoro, 76 — Boa Vista, São Vicente/SP",
+    "bairro": "Boa Vista",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.967006,
+    "lng": -46.374347
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.374347,
+     -23.967006
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-018",
+    "nome": "UBS Vila Valença",
+    "endereco": "Rua José Bonifácio, 415 — Vila Valença, São Vicente/SP",
+    "bairro": "Vila Valença",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.956115,
+    "lng": -46.384067
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.384067,
+     -23.956115
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-019",
+    "nome": "EMEI Monteiro Lobato",
+    "endereco": "Rua Piratininga, 202 — Vila Valença, São Vicente/SP",
+    "bairro": "Vila Valença",
+    "tipo": "educacao",
+    "subtipo": "EMEI",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.954447,
+    "lng": -46.38672
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.38672,
+     -23.954447
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-020",
+    "nome": "EMEF Leonor Mendes de Barros",
+    "endereco": "Rua Bento Pereira Sales, 58 — Vila Valença, São Vicente/SP",
+    "bairro": "Vila Valença",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.954843,
+    "lng": -46.383049
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.383049,
+     -23.954843
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-021",
+    "nome": "UBS Catiapoã",
+    "endereco": "Rua Valter do Amaral, s/n — Catiapoã, São Vicente/SP",
+    "bairro": "Catiapoã",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.959865,
+    "lng": -46.386563
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.386563,
+     -23.959865
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-022",
+    "nome": "UBS Tancredo Neves",
+    "endereco": "Praça Tancredo Neves, 160 — Catiapoã, São Vicente/SP",
+    "bairro": "Catiapoã",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.961614,
+    "lng": -46.392273
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.392273,
+     -23.961614
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-023",
+    "nome": "Creche Municipal Catiapoã",
+    "endereco": "Rua Ver. Bernardino Gomes, 31 — Catiapoã, São Vicente/SP",
+    "bairro": "Catiapoã",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.960741,
+    "lng": -46.38905
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.38905,
+     -23.960741
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-024",
+    "nome": "EMEF Profª Zezé Massuno",
+    "endereco": "Rua Frei Cosme, 140 — Catiapoã, São Vicente/SP",
+    "bairro": "Catiapoã",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.95782,
+    "lng": -46.390156
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.390156,
+     -23.95782
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-025",
+    "nome": "EMEI Menino Jesus",
+    "endereco": "Rua Embaré, 95 — Catiapoã, São Vicente/SP",
+    "bairro": "Catiapoã",
+    "tipo": "educacao",
+    "subtipo": "EMEI",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.958591,
+    "lng": -46.386624
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.386624,
+     -23.958591
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-026",
+    "nome": "UBS Parque Bitaru",
+    "endereco": "Rua São Judas Tadeu, s/n — Parque Bitaru, São Vicente/SP",
+    "bairro": "Parque Bitaru",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.963042,
+    "lng": -46.395099
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.395099,
+     -23.963042
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-027",
+    "nome": "EMEF Heitor Villa-Lobos",
+    "endereco": "Av. Antônio Emmerich, 740 — Parque Bitaru, São Vicente/SP",
+    "bairro": "Parque Bitaru",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.966186,
+    "lng": -46.392811
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.392811,
+     -23.966186
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-028",
+    "nome": "Creche Municipal Sonho da Criança",
+    "endereco": "Rua das Acácias, 33 — Parque Bitaru, São Vicente/SP",
+    "bairro": "Parque Bitaru",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.960665,
+    "lng": -46.397062
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.397062,
+     -23.960665
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-029",
+    "nome": "UBS Vila Margarida",
+    "endereco": "Rua Santa Terezinha, 299 — Vila Margarida, São Vicente/SP",
+    "bairro": "Vila Margarida",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.961558,
+    "lng": -46.407981
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.407981,
+     -23.961558
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-030",
+    "nome": "Creche Municipal Vila Margarida",
+    "endereco": "Rua Monte Belvedere, 480 — Vila Margarida, São Vicente/SP",
+    "bairro": "Vila Margarida",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.963397,
+    "lng": -46.403955
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.403955,
+     -23.963397
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-031",
+    "nome": "UBS Parque São Vicente",
+    "endereco": "Av. Salgado Filho, s/n — Parque São Vicente, São Vicente/SP",
+    "bairro": "Parque São Vicente",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.949006,
+    "lng": -46.40188
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.40188,
+     -23.949006
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-032",
+    "nome": "UBS Sambaiatuba",
+    "endereco": "Rua Santa Catarina, 225 — Parque São Vicente, São Vicente/SP",
+    "bairro": "Parque São Vicente",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.949597,
+    "lng": -46.396819
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.396819,
+     -23.949597
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-033",
+    "nome": "EMEF Dorival Caymmi",
+    "endereco": "Av. Nações Unidas, 615 — Parque São Vicente, São Vicente/SP",
+    "bairro": "Parque São Vicente",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.945077,
+    "lng": -46.397722
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.397722,
+     -23.945077
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-034",
+    "nome": "EMEI Cecília Meireles",
+    "endereco": "Rua Paraná, 118 — Parque São Vicente, São Vicente/SP",
+    "bairro": "Parque São Vicente",
+    "tipo": "educacao",
+    "subtipo": "EMEI",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.951558,
+    "lng": -46.39899
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.39899,
+     -23.951558
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-035",
+    "nome": "Creche Municipal Tia Nair",
+    "endereco": "Rua Rio Grande do Sul, 52 — Parque São Vicente, São Vicente/SP",
+    "bairro": "Parque São Vicente",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.946237,
+    "lng": -46.399283
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.399283,
+     -23.946237
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-036",
+    "nome": "Pronto Atendimento Cidade Náutica",
+    "endereco": "Av. Mal. Castelo Branco, s/n — Cidade Náutica, São Vicente/SP",
+    "bairro": "Cidade Náutica",
+    "tipo": "saude",
+    "subtipo": "Pronto Atendimento",
+    "atende_24h": true,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.956234,
+    "lng": -46.413744
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.413744,
+     -23.956234
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-037",
+    "nome": "UBS Náutica III",
+    "endereco": "Rua Santa Rosa, 225 — Cidade Náutica, São Vicente/SP",
+    "bairro": "Cidade Náutica",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.95184,
+    "lng": -46.413331
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.413331,
+     -23.95184
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-038",
+    "nome": "EMEF Florestan Fernandes",
+    "endereco": "Av. Mal. Castelo Branco, 449 — Cidade Náutica, São Vicente/SP",
+    "bairro": "Cidade Náutica",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.950013,
+    "lng": -46.409741
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.409741,
+     -23.950013
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-039",
+    "nome": "Creche Municipal Tic Tac",
+    "endereco": "Rua dos Jasmins, 87 — Cidade Náutica, São Vicente/SP",
+    "bairro": "Cidade Náutica",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.952862,
+    "lng": -46.412389
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.412389,
+     -23.952862
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-040",
+    "nome": "Pronto-Socorro Rio Branco",
+    "endereco": "Rua João Francisco Bensdorp, 721 — Jardim Rio Branco, São Vicente/SP",
+    "bairro": "Jardim Rio Branco",
+    "tipo": "saude",
+    "subtipo": "Pronto-Socorro",
+    "atende_24h": true,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.975987,
+    "lng": -46.473586
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.473586,
+     -23.975987
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-041",
+    "nome": "ESF Rio Branco II e III",
+    "endereco": "Rua Manoel Alves de Deus, s/n — Jardim Rio Branco, São Vicente/SP",
+    "bairro": "Jardim Rio Branco",
+    "tipo": "saude",
+    "subtipo": "ESF",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.978923,
+    "lng": -46.474929
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.474929,
+     -23.978923
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-042",
+    "nome": "EMEF Paulo Freire",
+    "endereco": "Av. Quarentenário, 1330 — Jardim Rio Branco, São Vicente/SP",
+    "bairro": "Jardim Rio Branco",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.979144,
+    "lng": -46.47216
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.47216,
+     -23.979144
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-043",
+    "nome": "Creche Municipal Paulo de Souza",
+    "endereco": "Rua Padre Adelino, 209 — Jardim Rio Branco, São Vicente/SP",
+    "bairro": "Jardim Rio Branco",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.975769,
+    "lng": -46.468918
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.468918,
+     -23.975769
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-044",
+    "nome": "Pronto Atendimento Humaitá",
+    "endereco": "Av. Dep. Ulysses Guimarães, s/n — Humaitá, São Vicente/SP",
+    "bairro": "Humaitá",
+    "tipo": "saude",
+    "subtipo": "Pronto Atendimento",
+    "atende_24h": true,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.954223,
+    "lng": -46.454806
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.454806,
+     -23.954223
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-045",
+    "nome": "Creche Municipal Prof. Celso Eduardo da Silva",
+    "endereco": "Rua Argemiro de Souza, 310 — Humaitá, São Vicente/SP",
+    "bairro": "Humaitá",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.950944,
+    "lng": -46.452257
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.452257,
+     -23.950944
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-046",
+    "nome": "Creche Municipal Quarentenário",
+    "endereco": "Av. Nossa Sra. das Dores, 590 — Quarentenário, São Vicente/SP",
+    "bairro": "Quarentenário",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.981399,
+    "lng": -46.460449
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.460449,
+     -23.981399
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-047",
+    "nome": "UBS Samaritá",
+    "endereco": "Av. Nossa Sra. de Fátima, 70 — Samaritá, São Vicente/SP",
+    "bairro": "Samaritá",
+    "tipo": "saude",
+    "subtipo": "UBS",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.991179,
+    "lng": -46.468236
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.468236,
+     -23.991179
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-048",
+    "nome": "Creche Municipal Eng. Seitetsu Iha",
+    "endereco": "Rua Luiz Vaz de Camões, 41 — Samaritá, São Vicente/SP",
+    "bairro": "Samaritá",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.98342,
+    "lng": -46.467044
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.467044,
+     -23.98342
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-049",
+    "nome": "EMEF Anísio Teixeira",
+    "endereco": "Av. Emílio Ribas, 826 — Samaritá, São Vicente/SP",
+    "bairro": "Samaritá",
+    "tipo": "educacao",
+    "subtipo": "EMEF",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": false,
+    "ensino_fundamental": true,
+    "lat": -23.987418,
+    "lng": -46.470368
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.470368,
+     -23.987418
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-050",
+    "nome": "ESF Japuí",
+    "endereco": "Rua Enseada, s/n — Japuí, São Vicente/SP",
+    "bairro": "Japuí",
+    "tipo": "saude",
+    "subtipo": "ESF",
+    "atende_24h": false,
+    "ambulatorial": true,
+    "educacao_infantil": false,
+    "ensino_fundamental": false,
+    "lat": -23.986381,
+    "lng": -46.396703
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.396703,
+     -23.986381
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sv-051",
+    "nome": "Creche Municipal Cora Coralina",
+    "endereco": "Rua das Garças, 263 — Japuí, São Vicente/SP",
+    "bairro": "Japuí",
+    "tipo": "educacao",
+    "subtipo": "Creche",
+    "atende_24h": false,
+    "ambulatorial": false,
+    "educacao_infantil": true,
+    "ensino_fundamental": false,
+    "lat": -23.991016,
+    "lng": -46.395781
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.395781,
+     -23.991016
+    ]
+   }
+  }
+ ]
+}

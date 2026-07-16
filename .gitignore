@@ -1,0 +1,8 @@
+# saída de conferência do ETL (gerada por etl/processar_dados.py)
+etl/saida/
+
+# Manual de identidade visual (30 MB) — mantido fora do versionamento para não
+# inchar o histórico do repositório. Compartilhe via Drive da equipe.
+# Para versioná-lo mesmo assim: remova esta linha e rode
+#   git add -f manual_coopclima.pdf
+manual_coopclima.pdf
